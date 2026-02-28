@@ -38,8 +38,8 @@ const Navbar = () => {
             transition={{ delay: 0.2 }}
             className="flex items-center space-x-2"
           >
-            <Waves className={`h-16 w-16 ${scrolled ? 'text-primary-600' : 'text-white'}`} />
-            <span className={`text-5xl font-bold ${scrolled ? 'text-gray-900' : 'text-white'}`}>
+            <Waves className={`h-8 w-8 sm:h-12 sm:w-12 md:h-16 md:w-16 ${scrolled ? 'text-primary-600' : 'text-white'}`} />
+            <span className={`text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold ${scrolled ? 'text-gray-900' : 'text-white'}`}>
               Avontide Consultants
             </span>
           </motion.div>
@@ -52,7 +52,7 @@ const Navbar = () => {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * index }}
-                className={`text-2xl font-medium transition-colors ${
+                className={`text-lg lg:text-xl xl:text-2xl font-medium transition-colors ${
                   scrolled
                     ? 'text-gray-700 hover:text-primary-600'
                     : 'text-white hover:text-primary-200'
@@ -66,9 +66,10 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={scrolled ? 'text-gray-900' : 'text-white'}
+              className={`p-2 ${scrolled ? 'text-gray-900' : 'text-white'}`}
+              aria-label="Toggle menu"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
             </button>
           </div>
         </div>
@@ -81,13 +82,13 @@ const Navbar = () => {
           exit={{ opacity: 0, height: 0 }}
           className="md:hidden bg-white shadow-lg"
         >
-          <div className="px-4 pt-2 pb-4 space-y-2">
+          <div className="px-4 pt-2 pb-4 space-y-1">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block px-3 py-2 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md"
+                className="block px-4 py-3 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-lg transition-colors"
               >
                 {link.name}
               </a>

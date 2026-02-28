@@ -30,24 +30,24 @@ const About = () => {
   ]
 
   return (
-    <section id="about" className="py-24 bg-white">
+    <section id="about" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           <motion.div
             ref={ref}
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-5 md:mb-6">
               About <span className="text-gradient">Avontide</span>
             </h2>
-            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-5 md:mb-6 leading-relaxed">
               Avontide is a premier sports consultancy firm dedicated to transforming athletic performance 
               and organizational excellence. With over 15 years of experience, we've helped hundreds of 
               athletes and teams reach their full potential.
             </p>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-7 md:mb-8 leading-relaxed">
               Our multidisciplinary team combines expertise in sports science, psychology, data analytics, 
               and strategic planning to deliver comprehensive solutions tailored to your unique needs.
             </p>
@@ -58,17 +58,17 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="flex flex-wrap gap-4"
             >
-              <div className="flex items-center gap-2 bg-primary-50 px-4 py-2 rounded-full">
-                <div className="w-2 h-2 bg-primary-600 rounded-full"></div>
-                <span className="text-primary-700 font-medium">Certified Professionals</span>
+              <div className="flex items-center gap-2 bg-primary-50 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full">
+                <div className="w-2 h-2 bg-primary-600 rounded-full flex-shrink-0"></div>
+                <span className="text-primary-700 font-medium text-sm sm:text-base">Certified Professionals</span>
               </div>
-              <div className="flex items-center gap-2 bg-primary-50 px-4 py-2 rounded-full">
-                <div className="w-2 h-2 bg-primary-600 rounded-full"></div>
-                <span className="text-primary-700 font-medium">Global Reach</span>
+              <div className="flex items-center gap-2 bg-primary-50 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full">
+                <div className="w-2 h-2 bg-primary-600 rounded-full flex-shrink-0"></div>
+                <span className="text-primary-700 font-medium text-sm sm:text-base">Global Reach</span>
               </div>
-              <div className="flex items-center gap-2 bg-primary-50 px-4 py-2 rounded-full">
-                <div className="w-2 h-2 bg-primary-600 rounded-full"></div>
-                <span className="text-primary-700 font-medium">24/7 Support</span>
+              <div className="flex items-center gap-2 bg-primary-50 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full">
+                <div className="w-2 h-2 bg-primary-600 rounded-full flex-shrink-0"></div>
+                <span className="text-primary-700 font-medium text-sm sm:text-base">24/7 Support</span>
               </div>
             </motion.div>
           </motion.div>
@@ -85,13 +85,13 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                className="bg-gradient-to-br from-gray-50 to-primary-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                className="bg-gradient-to-br from-gray-50 to-primary-50 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
-                  <value.icon className="h-6 w-6 text-white" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary-500 to-blue-500 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
+                  <value.icon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{value.title}</h3>
-                <p className="text-gray-600 text-sm">{value.description}</p>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">{value.title}</h3>
+                <p className="text-gray-600 text-xs sm:text-sm">{value.description}</p>
               </motion.div>
             ))}
           </motion.div>

@@ -14,23 +14,23 @@ const ServiceCard = ({ icon: Icon, title, description, delay }) => {
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.6, delay }}
-      className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+      className="group relative bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-primary-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
       
       <div className="relative">
-        <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-blue-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-          <Icon className="h-8 w-8 text-white" />
+        <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-primary-500 to-blue-500 rounded-lg sm:rounded-xl flex items-center justify-center mb-4 sm:mb-5 md:mb-6 group-hover:scale-110 transition-transform duration-300">
+          <Icon className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-white" />
         </div>
         
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">{title}</h3>
-        <p className="text-gray-600 leading-relaxed">{description}</p>
+        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">{title}</h3>
+        <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{description}</p>
         
         <motion.div
           initial={{ width: 0 }}
           animate={isInView ? { width: '100%' } : { width: 0 }}
           transition={{ duration: 0.8, delay: delay + 0.3 }}
-          className="h-1 bg-gradient-to-r from-primary-500 to-blue-500 mt-6 rounded-full"
+          className="h-1 bg-gradient-to-r from-primary-500 to-blue-500 mt-4 sm:mt-5 md:mt-6 rounded-full"
         />
       </div>
     </motion.div>
@@ -75,7 +75,7 @@ const Services = () => {
   ]
 
   return (
-    <section id="services" className="py-24 bg-gray-50">
+    <section id="services" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -84,15 +84,15 @@ const Services = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 px-4">
             Our <span className="text-gradient">Services</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
             Comprehensive sports consultancy solutions tailored to elevate performance and achieve excellence
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
           {services.map((service, index) => (
             <ServiceCard
               key={service.title}

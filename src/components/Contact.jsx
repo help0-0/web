@@ -45,7 +45,7 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="py-24 bg-gray-50">
+    <section id="contact" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -54,25 +54,25 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 px-4">
             Get In <span className="text-gradient">Touch</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
             Ready to elevate your performance? Contact us today to discuss how we can help you achieve your goals.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="bg-white rounded-xl sm:rounded-2xl shadow-xl p-5 sm:p-6 md:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-5 sm:mb-6">Send us a message</h3>
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5 md:space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="name" className="block text-sm sm:text-base font-medium text-gray-700 mb-2">
                     Name
                   </label>
                   <input
@@ -81,12 +81,12 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
                     required
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm sm:text-base font-medium text-gray-700 mb-2">
                     Email
                   </label>
                   <input
@@ -95,12 +95,12 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
                     required
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm sm:text-base font-medium text-gray-700 mb-2">
                     Message
                   </label>
                   <textarea
@@ -109,7 +109,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows="5"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
                     required
                   ></textarea>
                 </div>
@@ -117,7 +117,7 @@ const Contact = () => {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   type="submit"
-                  className="w-full bg-gradient-to-r from-primary-600 to-blue-600 text-white py-4 rounded-lg font-semibold text-lg hover:from-primary-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+                  className="w-full bg-gradient-to-r from-primary-600 to-blue-600 text-white py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:from-primary-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
                 >
                   Send Message
                   <Send className="h-5 w-5" />
@@ -132,9 +132,9 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <div className="bg-gradient-to-br from-primary-900 via-primary-800 to-blue-900 rounded-2xl shadow-xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-              <p className="text-gray-200 mb-8">
+            <div className="bg-gradient-to-br from-primary-900 via-primary-800 to-blue-900 rounded-xl sm:rounded-2xl shadow-xl p-5 sm:p-6 md:p-8 text-white">
+              <h3 className="text-xl sm:text-2xl font-bold mb-5 sm:mb-6">Contact Information</h3>
+              <p className="text-sm sm:text-base text-gray-200 mb-6 sm:mb-7 md:mb-8">
                 We're here to answer your questions and discuss how we can help you achieve your goals.
               </p>
               <div className="space-y-6">
@@ -145,14 +145,14 @@ const Contact = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                    className="flex items-start gap-4 group hover:bg-white hover:bg-opacity-10 p-4 rounded-lg transition-all duration-300"
+                    className="flex items-start gap-3 sm:gap-4 group hover:bg-white hover:bg-opacity-10 p-3 sm:p-4 rounded-lg transition-all duration-300"
                   >
-                    <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                      <info.icon className="h-6 w-6" />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <info.icon className="h-5 w-5 sm:h-6 sm:w-6" />
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-1">{info.title}</h4>
-                      <p className="text-gray-200">{info.content}</p>
+                      <h4 className="font-semibold mb-1 text-sm sm:text-base">{info.title}</h4>
+                      <p className="text-gray-200 text-sm sm:text-base">{info.content}</p>
                     </div>
                   </motion.a>
                 ))}
@@ -163,10 +163,10 @@ const Contact = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="bg-white rounded-2xl shadow-xl p-8"
+              className="bg-white rounded-xl sm:rounded-2xl shadow-xl p-5 sm:p-6 md:p-8"
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Office Hours</h3>
-              <div className="space-y-2 text-gray-600">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Office Hours</h3>
+              <div className="space-y-2 text-gray-600 text-sm sm:text-base">
                 <p className="flex justify-between">
                   <span className="font-medium">Monday - Friday:</span>
                   <span>9:00 AM - 6:00 PM</span>

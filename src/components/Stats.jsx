@@ -43,7 +43,7 @@ const Stats = () => {
   ]
 
   return (
-    <section className="py-24 bg-gradient-to-br from-primary-900 via-primary-800 to-blue-900 relative overflow-hidden">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-primary-900 via-primary-800 to-blue-900 relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full filter blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-300 rounded-full filter blur-3xl"></div>
@@ -57,15 +57,15 @@ const Stats = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4 px-4">
             Proven Track Record
           </h2>
-          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-200 max-w-3xl mx-auto px-4">
             Numbers that speak to our commitment to excellence
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -74,11 +74,11 @@ const Stats = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="text-center"
             >
-              <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300 hover:scale-105">
-                <div className="text-5xl md:text-6xl font-bold text-white mb-2">
+              <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 hover:bg-opacity-20 transition-all duration-300 hover:scale-105">
+                <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-1 sm:mb-2">
                   <CountUp end={stat.value} suffix={stat.suffix} />
                 </div>
-                <div className="text-gray-200 text-lg font-medium">{stat.label}</div>
+                <div className="text-gray-200 text-xs sm:text-sm md:text-base lg:text-lg font-medium">{stat.label}</div>
               </div>
             </motion.div>
           ))}
