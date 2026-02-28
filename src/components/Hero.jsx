@@ -4,7 +4,10 @@ import { ArrowRight, Trophy, Target, Users } from 'lucide-react'
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 sm:pt-32 lg:pt-36"
+    >
       <video
         autoPlay
         loop
