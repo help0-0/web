@@ -72,7 +72,7 @@ const Hero = () => {
           className="mt-12 sm:mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto px-4"
         >
           {[
-            { icon: Trophy, title: 'Championship Results', desc: 'Proven track record' },
+            { icon: Trophy, title: 'Project Results', desc: 'Proven track record' },
             { icon: Target, title: 'Strategic Planning', desc: 'Data-driven approach' },
             { icon: Users, title: 'Team Development', desc: 'Holistic growth' },
           ].map((item, index) => (
