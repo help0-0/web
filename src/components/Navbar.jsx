@@ -38,8 +38,8 @@ const Navbar = () => {
             transition={{ delay: 0.2 }}
             className="flex items-center space-x-2"
           >
-            <Waves className={`h-8 w-8 sm:h-12 sm:w-12 md:h-16 md:w-16 ${scrolled ? 'text-primary-600' : 'text-white'}`} />
-            <span className={`text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold ${scrolled ? 'text-gray-900' : 'text-white'}`}>
+            <Waves className={`h-6 w-6 sm:h-8 sm:w-8 md:h-12 md:w-12 ${scrolled ? 'text-primary-600' : 'text-white'}`} />
+            <span className={`text-sm sm:text-xl md:text-2xl lg:text-3xl font-bold ${scrolled ? 'text-gray-900' : 'text-white'}`}>
               Avontide Consultants
             </span>
           </motion.div>
